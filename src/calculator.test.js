@@ -20,8 +20,11 @@ it("Should allow other than comma", () => {
   expect(add("1\n2,3")).toBe(6);
 });
 
-
 it("should throw an exception", () => {
   expect(() => {add('2,-4,3,-5');
 }).toThrow('Negatives not allowed: -4,-5');
+});
+
+it("Should not count numbers higher than 1000", () => {
+  expect(add("1001,2")).toBe(2);
 });
