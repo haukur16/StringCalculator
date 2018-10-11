@@ -28,3 +28,7 @@ it("should throw an exception", () => {
 it("Should not count numbers higher than 1000", () => {
   expect(add("1001,2")).toBe(2);
 });
+
+it("Should allow new delimiter", () => {
+  expect(add("//;\n1;2")).toBe(3);
+});

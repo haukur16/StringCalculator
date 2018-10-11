@@ -2,6 +2,14 @@ function add(numbers) {
 
   if (numbers == "")
   return 0;
+  if (numbers.startsWith("//"))
+  {
+    var desi = numbers.charAt(2);
+    var skipFirst = numbers.substring(4);
+    var numberArray = skipFirst.split(desi);
+
+    return sum(numberArray);
+  }
   if (numbers.includes(","||"\n"||" "))
   {
     if (numbers.includes("-"))
