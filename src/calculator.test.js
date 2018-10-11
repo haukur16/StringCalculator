@@ -15,3 +15,7 @@ it("Should return sum of two given numbers", () => {
 it("Should return sum of multible numbers", () => {
   expect(add("1,2,3")).toBe(6);
 });
+
+it("Should allow other than comma", () => {
+  expect(add("1\n2,3")).toBe(6);
+});
